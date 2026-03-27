@@ -1,3 +1,9 @@
+# Ignore these languages in the language bar statistics
+*.css linguist-detectable=false
 *.py linguist-detectable=false
-*.js linguist-detectable=false
 *.html linguist-detectable=false
+*.js linguist-detectable=false
+
+# Explicitly tell GitHub these are the important ones
+*.cpp linguist-detectable=true
+*.h linguist-detectable=true

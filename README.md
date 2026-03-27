@@ -10,7 +10,7 @@ Moodify is a music recommendation system that uses Graph Theory and Hashing to g
 
 
 ## System Visualization
-![Mood Graph](graph.jpg)
+![Mood Graph](graph.png)
 
 ### Diagram Key & Logic
 To understand the recommendation engine's decision-making process:

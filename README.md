@@ -9,17 +9,25 @@ Moodify is a music recommendation system that uses Graph Theory and Hashing to g
 - **Hybrid Architecture:** Designed a system where a Python API (`backend.py`) communicates with a high-performance C++ engine (`moodify.exe`).
 
 
-## Similarity Logic
-To ensure smooth transitions between tracks, the system calculates edge weights based on:
+## System Visualization
+![Mood Graph](graph.jpg)
+
+### Diagram Key & Logic
+To understand the recommendation engine's decision-making process:
+
+* **Nodes (The Circles):** Each circle represents a unique **Song** in the database.
+* **Edges (The Lines):** The lines represent a **Similarity Connection** between two songs.
+* **Weights (The Numbers):** These are **Similarity Scores (0-100)** calculated by the backend. 
+    * *Example:* The connection between *The Hills* and *Hills Remix* is **92**, indicating nearly identical mood and tempo attributes.
+* **Traversal Logic:** The system uses **BFS (Breadth-First Search)** to traverse these edges, prioritizing paths with higher weights to ensure the playlist maintains a consistent "vibe."
+
+
+## Similarity Scoring
+The system calculates edge weights based on:
 - **Mood Match:** +50 points
 - **Genre Match:** +30 points
 - **Tempo Alignment:** Up to +30 points
 *An edge is only created between songs if the total similarity score exceeds 30.*
-
-
-## System Visualization
-![Mood Graph](graph.png)
-*Figure 1: Visualization of the weighted song similarity graph and song connectivity.*
 
 
 ## Project Structure
